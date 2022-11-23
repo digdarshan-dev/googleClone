@@ -4,13 +4,16 @@ import logo from '../../assets/img/logo.webp';
 import { useRouter } from 'next/router';
 import { MicrophoneIcon, SearchIcon, XIcon } from '@heroicons/react/solid';
 import User from '../user/User';
+import SearchHeaderOption from '../searchHeaderOption/SearchHeaderOption';
 export default function SearchHeader() {
   const router = useRouter();
   const searchInputRef = useRef(null);
   const search = (e) => {
     e.preventDefault();
     if (!searchInputRef.current.value.trim()) return;
-    router.push(`/search?query=${searchInputRef.current.value.trim()}`);
+    router.push(
+      `/search?query=${searchInputRef.current.value.trim()}&searchType=`
+    );
   };
   return (
     <header className='stick top-0 bg-white'>
@@ -44,6 +47,8 @@ export default function SearchHeader() {
         </form>
         <User className='ml-auto' />
       </div>
+      {/* search header optiosn */}
+      <SearchHeaderOption />
     </header>
   );
 }

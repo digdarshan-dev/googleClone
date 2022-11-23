@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Body from '../components/body/Body';
 import Header from '../components/header/Header';
 
 export default function Home() {
@@ -11,6 +12,9 @@ export default function Home() {
       </Head>
       {/* Header */}
       <Header />
+
+      {/* Body */}
+      <Body />
     </div>
   );
 }

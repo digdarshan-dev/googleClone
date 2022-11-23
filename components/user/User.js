@@ -10,14 +10,14 @@ export default function User() {
           onClick={signOut}
           src={session.user.image}
           alt='user-image'
-          className='h-10 w-10 rounded-full hover:bg-gray-200 cursor-pointer p-1'
+          className='h-10 w-10 rounded-full hover:bg-gray-200 cursor-pointer p-1 ml-auto'
         />
       </>
     );
   }
   return (
     <button
-      className='bg-blue-500 px-6 py-2 text-white font-medium rounded-md hover:bg-blue-700 transition-all hover:shadow-md'
+      className='bg-blue-500 px-6 py-2 text-white font-medium rounded-md hover:bg-blue-700 transition-all hover:shadow-md ml-auto'
       onClick={signIn}
     >
       Sign In

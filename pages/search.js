@@ -1,9 +1,12 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import React from 'react';
+import ImageResult from '../components/image/ImageResult';
 import SearchHeader from '../components/searchHeader/SearchHeader';
 import SearchResults from '../components/searchResults/SearchResults';
 
 export default function search({ results }) {
+  const router = useRouter();
   return (
     <div>
       <Head>
@@ -11,8 +14,12 @@ export default function search({ results }) {
       </Head>
       {/* search header */}
       <SearchHeader></SearchHeader>
-      {/* search result */}
-      <SearchResults results={results} />
+      {/* search image and web result */}
+      {router.query.searchType === 'image' ? (
+        <ImageResult results={results} />
+      ) : (
+        <SearchResults results={results} />
+      )}
     </div>
   );
 }

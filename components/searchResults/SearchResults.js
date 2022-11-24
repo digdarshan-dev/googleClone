@@ -12,7 +12,7 @@ export default function SearchResults({ results }) {
       {results.items.map((result) => (
         <div className='mt-5 max-w-xl' key={result.link}>
           <div className='group'>
-            <a clasName='text-sm truncate' href={result.link}>
+            <a className='text-sm truncate' href={result.link}>
               {result.formattedUrl}
             </a>
             <a

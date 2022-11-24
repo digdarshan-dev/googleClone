@@ -5,7 +5,7 @@ import ImageResult from '../components/image/ImageResult';
 import SearchHeader from '../components/searchHeader/SearchHeader';
 import SearchResults from '../components/searchResults/SearchResults';
 
-export default function search({ results }) {
+export default function Search({ results }) {
   const router = useRouter();
   return (
     <div>

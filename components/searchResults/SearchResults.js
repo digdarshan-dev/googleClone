@@ -1,5 +1,6 @@
 import React from 'react';
 import Parser from 'html-react-parser';
+import Pagination from '../pagination/Pagination';
 export default function SearchResults({ results }) {
   console.log(results);
   return (
@@ -26,6 +27,7 @@ export default function SearchResults({ results }) {
           <p className='text-gray-600'>{Parser(result.htmlSnippet)}</p>
         </div>
       ))}
+      <Pagination />
     </div>
   );
 }

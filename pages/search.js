@@ -1,17 +1,18 @@
 import Head from 'next/head';
 import React from 'react';
 import SearchHeader from '../components/searchHeader/SearchHeader';
+import SearchResults from '../components/searchResults/SearchResults';
 
 export default function search({ results }) {
-  console.log('result', results);
   return (
     <div>
       <Head>
-        <title>Search page</title>
+        <title>Search Page</title>
       </Head>
       {/* search header */}
       <SearchHeader></SearchHeader>
       {/* search result */}
+      <SearchResults results={results} />
     </div>
   );
 }
